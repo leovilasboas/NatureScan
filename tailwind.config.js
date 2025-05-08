@@ -7,27 +7,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-color': 'var(--primary-color)',
-        'secondary-color': 'var(--secondary-color)',
-        'accent-color': 'var(--accent-color)',
-        'background-color': 'var(--background-color)',
+        'spring-green': '#00FF7F',
+        'lime-green': '#32CD32',
+        'spotify-green': '#1DB954',
+        'dark-green': '#006400',
+        'forest-green': '#158C46',
+        'light-gray': '#E5E5E5',
+      },
+      fontFamily: {
+        sans: ['Space Grotesk', 'sans-serif'],
       },
       animation: {
-        'marquee': 'marquee 25s linear infinite',
-        'float': 'float 6s ease-in-out infinite',
+        'float': 'float 20s infinite linear',
       },
       keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' }
-        },
         float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' }
-        }
-      },
-      backdropBlur: {
-        xs: '2px',
+          '0%': { transform: 'translateY(0) rotate(0deg)' },
+          '100%': { transform: 'translateY(-100vh) rotate(360deg)' },
+        },
       },
     },
   },

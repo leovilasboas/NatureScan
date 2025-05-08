@@ -29,6 +29,27 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.gradient-text {
+  background: linear-gradient(135deg, var(--spring-green), var(--lime-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Navigation specific styles */
+.nav-link {
+  @apply px-4 py-2 rounded-lg transition-all duration-300;
+}
+
+.nav-link-active {
+  @apply bg-white/10 text-spring-green;
+}
+
+.nav-link-inactive {
+  @apply text-white/80 hover:text-spring-green hover:bg-white/5;
+}
+
+/* Existing styles remain unchanged */
 .glow-hover {
   transition: all 0.3s ease;
 }
@@ -51,13 +72,6 @@ body {
   100% {
     transform: translateY(-100vh) rotate(360deg);
   }
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, var(--spring-green), var(--lime-green));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
 .pulse {
